@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+</head>
+<body>
+   <h1>Imagem dinamica</h1> 
+   <p>Abrindo imagens em dispositivos diferentes</p>
+   <picture>
+    <source media="(max-width:750px )" srcset="imagens/imgp-.png" type="image/png">
+    <source media="(max-width:1050px )" srcset="imagens/imgm-.png" type="image/png">
+    <img src="imagens/imgg-.png" alt="Imagem grande">
+   </picture>
+   <h1>Reproduzindo audio</h1>
+   <p>Aprendendo a reproduzir audio em HTML5</p>
+   <audio controls>
+    <source src="audio/guanacast-33.mp3" type="audio/mpeg">
+    <p>Seu navegador não consegue reproduzir musicas clique <a href="audio/guanacast-33.mp3">aqui</a> para abrir a musica direto</p>
+   </audio>
+</body>
+</html>

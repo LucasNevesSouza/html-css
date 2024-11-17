@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'android';
+    src:  url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+}
+
+:root {
+    --cor0:  #c5ebd6;
+    --cor01: #83e1ad;
+    --cor02: #3ddc84;
+    --cor03: #2fa866;
+    --cor04: #1a5c37;
+    --cor05: #103d24;
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: 'Android';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor0);
+}
+
+header {
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    /*padding-top: 40px; "Expecificamente top para não influenciar o nav que fica logo embaixo"*/
+}
+
+header > h1 {
+    padding-bottom: 15px;
+    font-family: var(--fonte-destaque);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.592);
+}
+
+header > p {
+    font-family: var(--fonte-padrao);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.592);
+    padding-bottom: 20px;
+}
+
+nav {
+    background-color: none;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    font-family: var(--fonte-destaque);
+    border-radius: 3px;
+}
+
+nav > a:hover {
+    background-color: var(--cor02);
+    color: var(--cor05);
+    transition-duration: 0.5s;
+} 
+
+main {
+    background-color: var(--cor01);
+}
+
+article {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+
+article > h1{
+    font-family: var(--fonte-android);
+    color: var(--cor05);
+}
+
+article > h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor03);
+    background-image: linear-gradient(to right, var(--cor01), var(--cor0));
+}
+

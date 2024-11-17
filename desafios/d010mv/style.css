@@ -32,12 +32,14 @@ header {
     color: white;
     padding-top: 40px;
     /*padding-top: 40px; "Expecificamente top para não influenciar o nav que fica logo embaixo"*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.715);
 }
 
 header > h1 {
     padding-bottom: 15px;
     font-family: var(--fonte-destaque);
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.592);
+    font-weight: normal;
 }
 
 header > p {
@@ -51,7 +53,7 @@ nav {
     text-align: left;
     padding-top: 10px;
     padding-left: 10px;
-    padding-bottom: 10px;
+    font-weight: bold;
 }
 
 nav > a {
@@ -62,7 +64,7 @@ nav > a {
     font-size: 20px;
     font-family: var(--fonte-destaque);
     border-radius: 3px;
-}
+} 
 
 nav > a:hover {
     background-color: var(--cor02);
@@ -71,12 +73,92 @@ nav > a:hover {
 } 
 
 main {
-    background-color: var(--cor01);
+    margin: auto;
+    min-width: 300px;
+    max-width: 1000px;
+    margin-bottom: 30px;
+   /*    min-width: 300px;
+         max-width: 1000px;
+         O conteudo começará a se expandir aos 300px e apenas irá parar com 1000px.
+    */
+}
+
+main > p {
+    text-align: justify;
+}
+
+main > img {
+    min-width: 100%;
+    display: block;
+    margin: auto;
+    /*As imagens sempre ocuparão 100% do espaço disponivel*/
+}
+
+main p {
+    text-indent: 30px;
+    /*    text-indent: 30px; "Assim é possivel fazer o espaço no inicio de cada um dos parágrafos"*/
+    text-align: justify;
+    padding: 23px;
+    line-height: 2em;
+    /*    line-height: 1em; "Assim podemos configurar o espaço de cada uma das linhas entre si"*/
+}
+
+img.pequeno {
+    /*"Usamos uma classe para poder alterar apenas essa imagem do projeto"*/
+    max-width: 50%;
+    /*     max-width: 50%; "Usamos essa linha para diminuir o tamanho da imagem, pois essa imagem deve ser pequena, fazendo assim ela ocupar apenas 50% do seu espaço maximo"*/
+    margin: auto;
+    display: block;
+    /*margin: auto;
+    display: block;
+    "Usamos margin auto para centralizar, e usamos display block para transformar em bloco, pois apenas blocos tem margem"*/
+}
+
+main img {
+    display: block;
+    margin: auto;
+}
+
+main h1 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+main h2 {
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 article {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.573);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+mark {
+    background-color: var(--cor01);
+    color: var(--cor03);
+}
+
+mark.link {
+    text-decoration: none;
+    background-color: var(--cor03);
+    color: var(--cor05);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+mark.link::after {
+    content: '\1F517';
 }
 
 article > h1{
@@ -84,9 +166,61 @@ article > h1{
     color: var(--cor05);
 }
 
+mark:hover.link {
+    background-color: var(--cor05);
+    color: var(--cor01);
+}
+
+div.video {
+    background-color: var(--cor04);
+    margin-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+div.video > iframe {
+    min-width: 100%;
+}
+
 article > h2 {
     font-family: var(--fonte-android);
     color: var(--cor03);
     background-image: linear-gradient(to right, var(--cor01), var(--cor0));
+    font-size: 20px;
 }
 
+aside {
+    background-color: var(--cor01);
+    margin: 30px;
+    border-radius: 10px;
+    text-align: justify;
+    text-indent: 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.595);
+}
+
+aside > h2 {
+    background-color: var(--cor05);
+    color: white;  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    font-family: var(--fonte-destaque);
+}
+
+aside > ul {
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714 ';
+    /*"list-style-position: inside;" faz com que a lista fique inteiramente por dentro da box.*/
+
+}
+
+
+footer {
+    background-color: var(--cor05);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: var(--fonte-destaque);
+    font-size: 13px;
+}
